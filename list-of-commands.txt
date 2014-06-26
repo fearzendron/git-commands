@@ -1,0 +1,2 @@
+# Remove branchs mergeados com o master
+echo git push origin $(git branch -r --merged origin/master | sed "s/origin\\//:/" | egrep -v "HEAD|master|develop")
